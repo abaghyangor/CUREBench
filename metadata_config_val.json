@@ -1,16 +1,21 @@
 {
   "metadata": {
-    "model_name": "Qwen/Qwen3-8B",
-    "model_type": "LocalModel",
-    "track": "internal_reasoning",
-    "base_model_type": "Open weight model",
-    "base_model_name": "Qwen/Qwen3-8B",
+    "model_name": "gpt-4o",
+    "model_type": "ChatGPTModel",
+    "track": "agentic_reasoning",
+    "base_model_type": "API",
+    "base_model_name": "gpt-4o",
     "dataset": "cure_bench_pharse_1",
-    "additional_info": "Submission using configuration file"
+    "additional_info": "",
+    "average_tokens_per_question": "",
+    "average_tools_per_question": "",
+    "tool_category_coverage": ""
   },
   "dataset": {
     "dataset_name": "cure_bench_pharse_1",
-    "dataset_path": "path/to/curebench_valset.jsonl",
+    "dataset_path": "data/curebench_valset_phase1.jsonl",
     "description": "CureBench 2025 val questions"
-  }
+  },
+  "output_dir": "competition_results",
+  "output_file": "submission.csv"
 }

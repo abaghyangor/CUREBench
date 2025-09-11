@@ -1,0 +1,514 @@
+[
+  {
+    "id": "WfWiWK0yULaX",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which of the following conditions is a contraindication for the use of Gadavist?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "Gadavist (gadobutrol) is a gadolinium-based contrast agent (GBCA) used in magnetic resonance imaging (MRI) to enhance visualization of tissues. While Gadavist is generally well-tolerated, there are sp..."
+  },
+  {
+    "id": "hcZukKMtrRZ7",
+    "question_type": "multi_choice",
+    "question": "What is the minimum SPF value recommended for sunscreens to reduce the risk of skin cancer and early aging, as per the guidelines for the sunscreen branded as '70%'?",
+    "predicted": "D",
+    "correct": "C",
+    "full_response": "D"
+  },
+  {
+    "id": "cRbl2ruD1WMZ",
+    "question_type": "multi_choice",
+    "question": "Which of the following is NOT an indicated use for 'up and up ibuprofen'?",
+    "predicted": "A",
+    "correct": "C",
+    "full_response": "A"
+  },
+  {
+    "id": "SeNVyra7uLuW",
+    "question_type": "multi_choice",
+    "question": "What was observed regarding the systemic beta-adrenergic adverse effects of 1.25 mg Levalbuterol compared to 2.5 mg racemic albuterol sulfate in clinical studies?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "A"
+  },
+  {
+    "id": "AUKWr9SmYhyi",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which step in medical procedures is the drug brand name 'sterile' associated with?",
+    "predicted": "E",
+    "correct": "B",
+    "full_response": "The term \"sterile\" is not a drug brand name but rather a descriptor used in medical and pharmaceutical contexts to indicate that a product is free from viable microorganisms. Sterility is a critical r..."
+  },
+  {
+    "id": "ZSuguD8bB8HX",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which category of studies has been conducted to determine mutagenicity for Hydrocort?",
+    "predicted": "E",
+    "correct": "A",
+    "full_response": "Hydrocort (hydrocortisone) is a corticosteroid commonly used for its anti-inflammatory and immunosuppressive properties. When evaluating the mutagenicity of a drug like hydrocortisone, preclinical stu..."
+  },
+  {
+    "id": "UYErAdkmaCRq",
+    "question_type": "multi_choice",
+    "question": "How should Belladona be administered for children aged 2 years and under?",
+    "predicted": "D",
+    "correct": "C",
+    "full_response": "D"
+  },
+  {
+    "id": "KEFQPh31oTjK",
+    "question_type": "multi_choice",
+    "question": "How many drops of vaginal essential oil are recommended for a sitz bath to address vulvovaginitis itching and odor?",
+    "predicted": "A",
+    "correct": "C",
+    "full_response": "A"
+  },
+  {
+    "id": "37BqRqh855UL",
+    "question_type": "multi_choice",
+    "question": "What was the result of the non-inferiority analysis in Pediatric Study 2 comparing Palonosetron to Ondansetron for postoperative nausea and vomiting prevention?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "A"
+  },
+  {
+    "id": "meSDxVMG9fwe",
+    "question_type": "multi_choice",
+    "question": "What is the recommended storage temperature range for dg health nasal?",
+    "predicted": "D",
+    "correct": "B",
+    "full_response": "D"
+  },
+  {
+    "id": "zYx2p6AcHlUy",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the purpose of using vaginal essential oil before the application of gel during chronic inflammation?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "The use of vaginal essential oils before the application of a gel in the context of chronic inflammation is a therapeutic strategy that may be employed to enhance treatment outcomes. However, this app..."
+  },
+  {
+    "id": "ejCuva9Dbvlj",
+    "question_type": "multi_choice",
+    "question": "Which of the following statements about G-62 is true regarding its solubility and absorption?",
+    "predicted": "E",
+    "correct": "B",
+    "full_response": "E"
+  },
+  {
+    "id": "UfqFoSI83kdm",
+    "question_type": "multi_choice",
+    "question": "In the Ames test, what was observed regarding the genotoxic potential of Dopamine HCl?",
+    "predicted": "B",
+    "correct": "C",
+    "full_response": "B"
+  },
+  {
+    "id": "8FCe7t88KYAS",
+    "question_type": "multi_choice",
+    "question": "What percentage of plasma concentrations of albuterol sulfate was found in the brain of rats during intravenous studies?",
+    "predicted": "B",
+    "correct": "A",
+    "full_response": "B"
+  },
+  {
+    "id": "gsyLl2Ge7zPw",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which gadolinium-based contrast agent retains the least amount of gadolinium in the body?",
+    "predicted": "E",
+    "correct": "C",
+    "full_response": "Gadolinium-based contrast agents (GBCAs) are widely used in magnetic resonance imaging (MRI) to enhance image quality. However, concerns about gadolinium retention in the body have led to increased sc..."
+  },
+  {
+    "id": "y57Gv9UZlPbn",
+    "question_type": "open_ended_multi_choice",
+    "question": "How often should dose increments of venlafaxine be made when increasing the dose?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "Venlafaxine is a serotonin-norepinephrine reuptake inhibitor (SNRI) commonly used to treat major depressive disorder (MDD), generalized anxiety disorder (GAD), and other mood disorders. When increasin..."
+  },
+  {
+    "id": "LbhWroiUSSLQ",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which age group showed a reduction in suicidality risk with venlafaxine tablets compared to placebo?",
+    "predicted": "E",
+    "correct": "D",
+    "full_response": "Venlafaxine, a serotonin-norepinephrine reuptake inhibitor (SNRI), is commonly prescribed for major depressive disorder (MDD), generalized anxiety disorder (GAD), and other mood disorders. However, it..."
+  },
+  {
+    "id": "hisVEgN8wQWx",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which symptom is specifically relieved by the nighttime formulation of the drug 'nighttime severe cold and flu'?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "The nighttime formulation of \"nighttime severe cold and flu\" is specifically designed to relieve symptoms that interfere with sleep, such as **coughing** and **nasal congestion**, while also addressin..."
+  },
+  {
+    "id": "s2Tb5DRLFTyn",
+    "question_type": "open_ended_multi_choice",
+    "question": "In which animal model did albuterol sulfate show no evidence of tumorigenicity at dietary doses up to 500 mg/kg?",
+    "predicted": "B",
+    "correct": "A",
+    "full_response": "Albuterol sulfate, a beta-2 adrenergic receptor agonist commonly used for the treatment of bronchospasm in conditions such as asthma and chronic obstructive pulmonary disease (COPD), has been extensiv..."
+  },
+  {
+    "id": "sREowFmeVh0w",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which treatment option is appropriate for recurrent metastatic non-squamous NSCLC after prior chemotherapy using Pemetrexed for Injection?",
+    "predicted": "E",
+    "correct": "A",
+    "full_response": "Recurrent metastatic non-squamous non-small cell lung cancer (NSCLC) after prior chemotherapy with Pemetrexed for Injection presents a challenging clinical scenario requiring careful consideration of ..."
+  },
+  {
+    "id": "vLLqOGKtUreF",
+    "question_type": "multi_choice",
+    "question": "What is the concentration of hydrocortisone in ALA-SCALP (Hydrocortisone Lotion USP)?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "A"
+  },
+  {
+    "id": "6f0P2aXi6BuR",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the recommended action if GOPRELTO is administered to a patient with a history of myocardial infarction?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "Administering GOPRELTO (cocaine hydrochloride nasal solution) to a patient with a history of myocardial infarction (MI) is contraindicated and should be avoided due to significant safety concerns. Bel..."
+  },
+  {
+    "id": "Gdqxh1gO6Xss",
+    "question_type": "open_ended_multi_choice",
+    "question": "For children aged 2 to 12 years, what is the recommended dosage of Belladona?",
+    "predicted": "D",
+    "correct": "B",
+    "full_response": "Belladonna is a plant-derived substance that contains tropane alkaloids, such as atropine, scopolamine, and hyoscyamine, which act as anticholinergic agents. These compounds block the action of acetyl..."
+  },
+  {
+    "id": "mUAkbujPizzk",
+    "question_type": "multi_choice",
+    "question": "What was the duration of the acute treatment phase in the trial that demonstrated the efficacy of venlafaxine extended-release capsules in maintaining an antidepressant response?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "C: 12 weeks"
+  },
+  {
+    "id": "L7UZwKN5EdxD",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the correct sequence for administering Verkazia when using other eye drops or ointments?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "Verkazia (cyclosporine ophthalmic emulsion 0.1%) is a prescription medication used to treat severe vernal keratoconjunctivitis (VKC) in children and adolescents. When administering Verkazia alongside ..."
+  },
+  {
+    "id": "dbROsaqBWmgw",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the recommended amount of hydrocort shampoo to use during application?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "Hydrocort shampoo is a topical corticosteroid formulation containing hydrocortisone, typically used to treat inflammatory scalp conditions such as seborrheic dermatitis or psoriasis. The recommended a..."
+  },
+  {
+    "id": "cAQk37wdlYo1",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which of the following is true regarding the use of Fluoxetine in combination with Olanzapine for treating depressive episodes associated with Bipolar I Disorder?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "The combination of **Fluoxetine** (a selective serotonin reuptake inhibitor, SSRI) and **Olanzapine** (an atypical antipsychotic) is an FDA-approved treatment for **depressive episodes associated with..."
+  },
+  {
+    "id": "4rJLcaEn5YxD",
+    "question_type": "open_ended_multi_choice",
+    "question": "What was the percentage of patients with endoscopically proven healing of esophageal lesions after 8 weeks of treatment with pantoprazole sodium delayed-release tablets?",
+    "predicted": "E",
+    "correct": "B",
+    "full_response": "Pantoprazole sodium delayed-release tablets are proton pump inhibitors (PPIs) that work by irreversibly inhibiting the H+/K+ ATPase enzyme in the gastric parietal cells, effectively reducing gastric a..."
+  },
+  {
+    "id": "2xd6ghH1mTAY",
+    "question_type": "open_ended_multi_choice",
+    "question": "In the study of acute reflux esophagitis, what was the duration of initial treatment with pantoprazole sodium for injection before switching to oral pantoprazole sodium delayed-release tablets?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "In the study of acute reflux esophagitis, the initial treatment with **pantoprazole sodium for injection** typically lasted **7 to 10 days** before transitioning to **oral pantoprazole sodium delayed-..."
+  },
+  {
+    "id": "QVqzYhqMqsKc",
+    "question_type": "multi_choice",
+    "question": "Which of the following is true regarding the contraindications of the drug Agrylin?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "A"
+  },
+  {
+    "id": "nV3QRM0ZYe8h",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which patient condition is a contraindication for prescribing Guanfacine extended-release?",
+    "predicted": "E",
+    "correct": "A",
+    "full_response": "Guanfacine extended-release (ER) is a selective alpha-2A adrenergic receptor agonist commonly prescribed for the treatment of attention-deficit/hyperactivity disorder (ADHD) in pediatric and adolescen..."
+  },
+  {
+    "id": "RsT4yEVvPchh",
+    "question_type": "open_ended_multi_choice",
+    "question": "For the indication 'INDICATION', which drug brand name is relevant?",
+    "predicted": "E",
+    "correct": "A",
+    "full_response": "To provide a comprehensive answer to your question, I would need more specific details about the indication (\"INDICATION\") you are referring to. However, I can provide a structured framework for how t..."
+  },
+  {
+    "id": "OhzVvNLVpXly",
+    "question_type": "open_ended_multi_choice",
+    "question": "How does Junel 21 Day compare to other contraceptive methods in terms of typical failure rates?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "Junel 21 Day is a combined oral contraceptive (COC) containing ethinyl estradiol and norethindrone, which works primarily by inhibiting ovulation, thickening cervical mucus to prevent sperm penetratio..."
+  },
+  {
+    "id": "m5wAed5GouIf",
+    "question_type": "multi_choice",
+    "question": "What is the sodium content per 15 mL dose of the drug meijer stomach relief regular strength?",
+    "predicted": "B",
+    "correct": "A",
+    "full_response": "B"
+  },
+  {
+    "id": "OY7z5v4a1npl",
+    "question_type": "open_ended_multi_choice",
+    "question": "What should physicians evaluate before prescribing venlafaxine tablets?",
+    "predicted": "C",
+    "correct": "A",
+    "full_response": "Venlafaxine is a serotonin-norepinephrine reuptake inhibitor (SNRI) commonly prescribed for major depressive disorder (MDD), generalized anxiety disorder (GAD), social anxiety disorder, and panic diso..."
+  },
+  {
+    "id": "EBeIyLZMbrsE",
+    "question_type": "open_ended_multi_choice",
+    "question": "What should be monitored in children and adolescents taking venlafaxine tablets?",
+    "predicted": "E",
+    "correct": "B",
+    "full_response": "Venlafaxine is a serotonin-norepinephrine reuptake inhibitor (SNRI) commonly prescribed for major depressive disorder (MDD), generalized anxiety disorder (GAD), and other mood disorders. While venlafa..."
+  },
+  {
+    "id": "nz2BZihS2OTS",
+    "question_type": "multi_choice",
+    "question": "What is the brand name of the drug associated with the MULTI FUNCTION SLEEPING PACK?",
+    "predicted": "C",
+    "correct": "A",
+    "full_response": "C"
+  },
+  {
+    "id": "eOekgajwExEk",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is one of the symptoms that 'nighttime severe cold and flu' helps relieve to improve sleep quality?",
+    "predicted": "A",
+    "correct": "C",
+    "full_response": "One of the symptoms that \"nighttime severe cold and flu\" formulations commonly help relieve to improve sleep quality is **nasal congestion**. Addressing nasal congestion is critical for improving slee..."
+  },
+  {
+    "id": "KDk5KEtcd2g7",
+    "question_type": "open_ended_multi_choice",
+    "question": "When Ondansetron is administered with Tramadol, what potential effect might occur?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "When **ondansetron** is administered with **tramadol**, there is a potential for a **pharmacodynamic interaction** that may reduce the analgesic efficacy of tramadol. This interaction is primarily due..."
+  },
+  {
+    "id": "OB8FmIUYXQmZ",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which of the following is NOT a correct storage condition for 'up and up nighttime cold and flu'?",
+    "predicted": "C",
+    "correct": "D",
+    "full_response": "To provide a comprehensive clinical reasoning for determining the correct storage conditions for \"Up & Up Nighttime Cold and Flu\" (a common over-the-counter medication containing ingredients like acet..."
+  },
+  {
+    "id": "UxhA39dXgR9u",
+    "question_type": "open_ended_multi_choice",
+    "question": "In a trial for adjunctive therapy in adults with partial-onset seizures, what was the median seizure frequency reduction observed with a 400 mg/day dose of lamotrigine compared to placebo?",
+    "predicted": "E",
+    "correct": "B",
+    "full_response": "In clinical trials evaluating **lamotrigine** as adjunctive therapy for adults with **partial-onset seizures**, the **median seizure frequency reduction** observed with a **400 mg/day dose** compared ..."
+  },
+  {
+    "id": "cmpMXD8Z0ned",
+    "question_type": "multi_choice",
+    "question": "What is the recommended method for using the vaginal essential oil during menstruation to avoid repeated cross-infection of dirt?",
+    "predicted": "C",
+    "correct": "A",
+    "full_response": "C"
+  },
+  {
+    "id": "YiXP2nLc1jlb",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which brand name drug is specifically indicated for the treatment of acne?",
+    "predicted": "E",
+    "correct": "A",
+    "full_response": "One of the most well-known brand name drugs specifically indicated for the treatment of acne is **Accutane** (generic name: isotretinoin). Below is a comprehensive clinical reasoning that covers its m..."
+  },
+  {
+    "id": "JtkZZ2eDojse",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the recommended storage temperature range for the drug 'sterile' in Fahrenheit?",
+    "predicted": "E",
+    "correct": "B",
+    "full_response": "The term \"sterile\" is not a specific drug but rather a descriptor indicating that a product is free from microorganisms. Sterile products can include a wide range of medications, such as injectable dr..."
+  },
+  {
+    "id": "ADHofopHeGcP",
+    "question_type": "open_ended_multi_choice",
+    "question": "How long might it take to experience the full effect of dg health nasal with regular use?",
+    "predicted": "B",
+    "correct": "C",
+    "full_response": "The time it takes to experience the full effect of DG Health Nasal Spray (commonly containing oxymetazoline, a topical nasal decongestant) depends on its pharmacological mechanism, the condition being..."
+  },
+  {
+    "id": "cAAH7wJEE024",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is one of the benefits of the daytime formulation of 'nighttime severe cold and flu'?",
+    "predicted": "A",
+    "correct": "C",
+    "full_response": "The daytime formulation of \"nighttime severe cold and flu\" medications is designed to provide symptomatic relief for cold and flu symptoms while minimizing sedative effects, allowing patients to maint..."
+  },
+  {
+    "id": "2pIjVD8VXRFI",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the recommended dosage for children aged 6 to under 12 years using the laxative for women?",
+    "predicted": "D",
+    "correct": "A",
+    "full_response": "The question appears to involve determining the appropriate dosage of a laxative for children aged 6 to under 12 years, specifically referencing a product labeled as a \"laxative for women.\" While the ..."
+  },
+  {
+    "id": "Uc5NEuhLvAQJ",
+    "question_type": "multi_choice",
+    "question": "Why might supplemental oxygen degrade the image quality during XENOVIEW imaging?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "C"
+  },
+  {
+    "id": "R72aNMGB07QK",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the maximum temperature that 'up and up ibuprofen' should be exposed to during storage?",
+    "predicted": "A",
+    "correct": "C",
+    "full_response": "The maximum storage temperature for \"Up & Up Ibuprofen\" (a generic ibuprofen product) is typically **25\u00b0C (77\u00b0F)**, with excursions permitted up to **30\u00b0C (86\u00b0F)** for short periods, as per standard g..."
+  },
+  {
+    "id": "cdthyeg9iByb",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which of the following assays demonstrated that Fluoxetine and its metabolite Norfluoxetine have no genotoxic effects?",
+    "predicted": "A",
+    "correct": "C",
+    "full_response": "Fluoxetine, a selective serotonin reuptake inhibitor (SSRI), and its active metabolite, norfluoxetine, have been extensively studied for their safety profile, including their potential genotoxic effec..."
+  },
+  {
+    "id": "ku8SatNgErue",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the potential effect of dg health nasal spray on the growth rate of children aged 4 to 11 years?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "DG Health Nasal Spray is a generic over-the-counter product that may contain various active ingredients depending on the formulation, such as oxymetazoline (a decongestant), fluticasone (a corticoster..."
+  },
+  {
+    "id": "rd8y2NuvFRln",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the recommended dosage of vaginal essential oil for preventing repeated cross-infection during menstruation?",
+    "predicted": "E",
+    "correct": "A",
+    "full_response": "The use of vaginal essential oils for preventing repeated cross-infections during menstruation is not a standard or evidence-based medical practice. Essential oils are not approved by regulatory agenc..."
+  },
+  {
+    "id": "AT9GDszK1hZb",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the recommended frequency of nicotine lozenge usage during Weeks 7 to 9 of the 12-week schedule?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "The recommended frequency of nicotine lozenge usage during Weeks 7 to 9 of the standard 12-week smoking cessation schedule is **1 lozenge every 4 to 8 hours**. This reduction in frequency is part of a..."
+  },
+  {
+    "id": "PaxBaeUVWssf",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which drug brand name is explicitly stated as not being a controlled substance?",
+    "predicted": "E",
+    "correct": "A",
+    "full_response": "One example of a drug brand name explicitly stated as not being a controlled substance is **Lexapro** (escitalopram). Below is a comprehensive clinical reasoning to explain why Lexapro is not classifi..."
+  },
+  {
+    "id": "dIQtc2GiPQqZ",
+    "question_type": "multi_choice",
+    "question": "What is the recommendation for patients with severe hepatic impairment (Child-Pugh score greater than 9) when administering FOSAPREPITANT?",
+    "predicted": "C",
+    "correct": "B",
+    "full_response": "C"
+  },
+  {
+    "id": "gPlSlEHQxSSy",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the proper procedure for cleaning the spray nozzle of dg health nasal spray?",
+    "predicted": "B",
+    "correct": "C",
+    "full_response": "Cleaning the spray nozzle of a nasal spray, such as DG Health Nasal Spray, is an important step to ensure proper hygiene, maintain the effectiveness of the medication, and prevent contamination or inf..."
+  },
+  {
+    "id": "wedPQbaIqDvb",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which of the following drugs is specifically associated with the indication 'INDICATION'?",
+    "predicted": "E",
+    "correct": "A",
+    "full_response": "Your question appears to be incomplete, as it does not specify the drug or the indication in question. However, I can provide a general framework for how to approach the clinical reasoning process whe..."
+  },
+  {
+    "id": "Wj4C9lpFvvoj",
+    "question_type": "multi_choice",
+    "question": "What is the relationship between Hydroxym and mutagenicity studies conducted with prednisolone and hydrocortisone?",
+    "predicted": "B",
+    "correct": "C",
+    "full_response": "B"
+  },
+  {
+    "id": "5WlV4jwibRVk",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which brand name product is indicated for preventing the recurrence of flaking and itching associated with dandruff?",
+    "predicted": "B",
+    "correct": "A",
+    "full_response": "A brand name product commonly indicated for preventing the recurrence of flaking and itching associated with dandruff is **Head & Shoulders**. This product contains active ingredients such as **pyrith..."
+  },
+  {
+    "id": "DhvhP8s8ImJs",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which condition is NOT treated by the drug 'antifungal'?",
+    "predicted": "D",
+    "correct": "B",
+    "full_response": "Antifungal drugs are specifically designed to treat fungal infections by targeting the unique biological processes of fungi. These drugs are not effective against conditions caused by non-fungal patho..."
+  },
+  {
+    "id": "xf6HN4OBnOfO",
+    "question_type": "open_ended_multi_choice",
+    "question": "What was the highest dose of fluoxetine administered to rats in the 2-year carcinogenicity study, and how does it compare to the maximum recommended human dose (MRHD) on a mg/m\u00b2 basis?",
+    "predicted": "D",
+    "correct": "A",
+    "full_response": "In the 2-year carcinogenicity study conducted on rats, the highest dose of fluoxetine administered was **10 mg/kg/day**. When comparing this dose to the maximum recommended human dose (MRHD) of fluoxe..."
+  },
+  {
+    "id": "bTRBbV6qxZTA",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the brand name of the drug used for general body cleansing processes?",
+    "predicted": "E",
+    "correct": "A",
+    "full_response": "The brand name of the drug commonly used for general body cleansing processes is **GoLYTELY** (polyethylene glycol 3350 and electrolytes). This medication is primarily used as a bowel preparation agen..."
+  },
+  {
+    "id": "h21jblZa7lPd",
+    "question_type": "open_ended_multi_choice",
+    "question": "What is the primary use of the drug branded as 70%?",
+    "predicted": "A",
+    "correct": "B",
+    "full_response": "The term \"70%\" in the context of a drug or therapeutic agent typically refers to a concentration of a specific substance, most commonly **70% isopropyl alcohol** or **70% ethanol**. These are widely u..."
+  },
+  {
+    "id": "3Ol2rkb1Io5n",
+    "question_type": "open_ended_multi_choice",
+    "question": "Which statement best describes the storage requirements for HIMARK?",
+    "predicted": "E",
+    "correct": "B",
+    "full_response": "As of my knowledge cutoff in October 2023, there is no widely recognized drug or therapeutic agent named \"HIMARK\" in clinical practice or pharmaceutical databases. It is possible that \"HIMARK\" refers ..."
+  }
+]

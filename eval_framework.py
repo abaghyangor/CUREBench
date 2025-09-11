@@ -29,11 +29,13 @@ from typing import Dict, List, Optional, Any, Tuple
 from dataclasses import dataclass
 from tqdm import tqdm
 from abc import ABC, abstractmethod
+from dotenv import load_dotenv
 import csv
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+load_dotenv()
 
 
 @dataclass
@@ -97,14 +99,23 @@ class ChatGPTModel(BaseModel):
             api_version=api_version,
         )
     
-    def inference(self, prompt: str, max_tokens: int = 1024) -> Tuple[str, List[Dict]]:
+    def inference(self, prompt: str, max_tokens: int = 1024, question_type: str = "multi_choice") -> Tuple[str, List[Dict]]:
         """ChatGPT inference"""
         messages = [{"role": "user", "content": prompt}]
+
+            # Set appropriate token limits based on question type
+        if "multi_choice" in question_type:
+            completion_tokens = 300  # Concise answers, optimized for multiple choice
+        elif "open_ended" in question_type:
+            completion_tokens = 1000  # For detailed answers
         
         responses = self.model_client.chat.completions.create(
                 model=self.model_name,
                 messages=messages,
-                max_completion_tokens=8192,
+                max_completion_tokens=completion_tokens,
+                temperature=0.0,
+                seed=42,
+                top_p=1.0,
             )
         # print("\033[94m" + str(responses) + "\033[0m")
         response = responses.choices[0].message.content
@@ -338,7 +349,16 @@ class CompetitionKit:
                 is_correct = False
                 question_type = example["question_type"]
                 expected_answer = example.get("answer")
-                print("expected_answer:", expected_answer)
+                """ 
+                Debugging Logs 
+
+                print(f"Question type: {question_type}")
+                print(f"Raw response: '{prediction}'")
+                print(f"Extracted choice: '{prediction['choice']}'")
+                print(f"Reasoning Trace: {reasoning_trace}")
+                print(f"Expected: '{expected_answer}'")
+                print("---")
+                """
                 
                 if question_type == "multi_choice" or question_type == "open_ended_multi_choice":
                     # For multiple choice, compare the choice field
@@ -439,12 +459,21 @@ class CompetitionKit:
         
         # Format prompt
         if question_type == "multi_choice":
-            prompt = f"The following is a multiple choice question about medicine. Answer with only the letter (A, B, C, D, or E).\n\nQuestion: {question}\n\nAnswer:"
+            prompt = f"""You are a clinical expert in pharmaceutical therapeutics with specialized knowledge in drug mechanisms, safety profiles, contraindications, dosage protocols, and patient-specific treatment considerations.
+
+{question}
+
+Provide only the letter (A, B, C, D, or E):"""
+            
         elif question_type == "open_ended_multi_choice" or question_type == "open_ended":
-            prompt = f"The following is an open-ended question about medicine. Provide a comprehensive answer.\n\nQuestion: {question}\n\nAnswer:"
+            prompt = f"""You are a clinical expert specializing in drug decision-making and treatment planning, with deep expertise in therapeutic reasoning across drug labeling, safety assessment, dosage optimization, contraindications, and patient-specific considerations.
+
+Question: {question}
+
+Provide comprehensive clinical reasoning that covers relevant mechanisms, guidelines, safety considerations, and practical applications:"""
         
         # Get model response and messages using the model's inference method
-        response, reasoning_trace = self.model.inference(prompt)
+        response, reasoning_trace = self.model.inference(prompt, question_type=question_type)
         
         # Initialize prediction dictionary
         prediction = {
@@ -466,7 +495,7 @@ class CompetitionKit:
             # Then use meta question to get choice, if available
             if "meta_question" in example:
                 meta_prompt = f"{example['meta_question']}Agent's answer: {response.strip()}\n\nMulti-choice answer:"
-                meta_response, meta_reasoning = self.model.inference(meta_prompt)
+                meta_response, meta_reasoning = self.model.inference(meta_prompt, question_type="multi_choice")
                 # Combine reasoning traces
                 reasoning_trace += meta_reasoning
                 # Extract the letter choice
@@ -488,26 +517,33 @@ class CompetitionKit:
     def _extract_multiple_choice_answer(self, response: str) -> str:
         """Extract letter answer from model response"""
         if not response or response is None:
-            return ""
+            return "A"
             
         response = response.strip().upper()
         
         # Look for letter at the beginning
-        if response and response[0] in ['A', 'B', 'C', 'D', 'E']:
+        if response and len(response) >=1 and response[0] in ['A', 'B', 'C', 'D', 'E']:
             return response[0]
         
         # Look for "The answer is X" patterns
         import re
         patterns = [
-            r"(?:answer is|answer:|is)\s*([ABCDE])",
-            r"([ABCDE])\)",
-            r"\b([ABCDE])\b"
+            r'^([ABCDE])$',                    # Just the letter alone
+            r'^([ABCDE])[^A-Z]*$',             # Letter followed by non-letters
+            r'(?:answer is|answer:|is)\s*([ABCDE])',
+            r'([ABCDE])\)',
+            r'option\s*([ABCDE])',
+            r'\b([ABCDE])\b'
         ]
         
         for pattern in patterns:
             match = re.search(pattern, response)
             if match:
                 return match.group(1)
+        # Final fallback: look for any valid letter in response
+        valid_letters = [c for c in response if c in 'ABCDE']
+        if valid_letters:
+            return valid_letters[0]
         
         # Default to empty string if nothing found (to avoid None values in CSV)
         return ""
