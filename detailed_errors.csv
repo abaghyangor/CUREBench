@@ -1,0 +1,407 @@
+id,question_type,question,predicted,correct,full_response
+1CW71PEfUO3w,open_ended_multi_choice,Which of the following is a potential adverse reaction upon abrupt discontinuation of fluoxetine?,B,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: ADVERSE_EVENT
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks about potential ad..."
+sMLyoU0d3Mrn,open_ended_multi_choice,What should be considered if blood pressure remains inadequately controlled in a patient taking NURTEC ODT?,D,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to managing a patient'..."
+78rb8mSjrZSd,multi_choice,What is the appropriate action if a patient experiences a severe infusion reaction during Ogivri administration?,B,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: ADVERSE_EVENT
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to managing a severe infusi..."
+xFqyj9rw02CP,open_ended_multi_choice,Terbinafine should not be prescribed to patients with which of the following conditions?,B,D,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CONTRAINDICATIONS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: Terbinafine has specific contraindications th..."
+SeNVyra7uLuW,multi_choice,What was observed regarding the systemic beta-adrenergic adverse effects of 1.25 mg Levalbuterol compared to 2.5 mg racemic albuterol sulfate in clinical studies?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the comparison of sys..."
+AUKWr9SmYhyi,open_ended_multi_choice,Which step in medical procedures is the drug brand name 'sterile' associated with?,E,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_BRANDS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to the drug bran..."
+ep0KXYKj2lYJ,multi_choice,Which group had the highest percentage of patients reporting headache in the Phase 3 clinical study?,D,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to data from a Phase 3 c..."
+vPiXAVp07Qga,open_ended_multi_choice,What is the suggested water temperature for a sitz bath using vaginal essential oil?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the practical appli..."
+UYErAdkmaCRq,multi_choice,How should Belladona be administered for children aged 2 years and under?,D,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CONTRAINDICATIONS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the safety and appro..."
+KEFQPh31oTjK,multi_choice,How many drops of vaginal essential oil are recommended for a sitz bath to address vulvovaginitis itching and odor?,A,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.80
+• Routing Reasoning: The question pertains to the appropriate dos..."
+37BqRqh855UL,multi_choice,What was the result of the non-inferiority analysis in Pediatric Study 2 comparing Palonosetron to Ondansetron for postoperative nausea and vomiting prevention?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the results of a non-..."
+BFuvT8DFarY8,multi_choice,What is the primary use of the drug brand name 'sterile'?,E,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_BRANDS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks about the primary us..."
+UfqFoSI83kdm,multi_choice,"In the Ames test, what was observed regarding the genotoxic potential of Dopamine HCl?",B,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TOXICOLOGY
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the genotoxic potential of ..."
+UZ9Cq3pCY3vv,open_ended_multi_choice,Which of the following statements is true regarding Guanfacine extended-release tablets?,B,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to Guanfacine extended..."
+s2Tb5DRLFTyn,open_ended_multi_choice,In which animal model did albuterol sulfate show no evidence of tumorigenicity at dietary doses up to 500 mg/kg?,B,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TOXICOLOGY
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the assessment of tumorigen..."
+sREowFmeVh0w,open_ended_multi_choice,Which treatment option is appropriate for recurrent metastatic non-squamous NSCLC after prior chemotherapy using Pemetrexed for Injection?,E,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to select..."
+vLLqOGKtUreF,multi_choice,What is the concentration of hydrocortisone in ALA-SCALP (Hydrocortisone Lotion USP)?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_INGREDIENTS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks about the conce..."
+Gdqxh1gO6Xss,open_ended_multi_choice,"For children aged 2 to 12 years, what is the recommended dosage of Belladona?",D,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DOSAGE_CALCULATION
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks for the recom..."
+9SIC14KQED3R,multi_choice,"In a study comparing pantoprazole sodium delayed-release tablets and pantoprazole sodium for injection in GERD patients with a history of erosive esophagitis (EE), what was the mean basal acid output (BAO) for patients treated with intravenous placebo on Day 7?",B,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to specific data from a ..."
+AfbIMw2Vozx5,multi_choice,"In the study comparing pantoprazole sodium for injection and delayed-release tablets, what was the mean basal acid output (BAO) for patients treated with pantoprazole sodium for injection on Day 7?",C,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to specific clinical tri..."
+QW5VLMBYgT5M,open_ended_multi_choice,"If a patient has a history of hypersensitivity to clindamycin, which drug should be avoided?",C,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CONTRAINDICATIONS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically addresses the need ..."
+L7UZwKN5EdxD,open_ended_multi_choice,What is the correct sequence for administering Verkazia when using other eye drops or ointments?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the correct sequenc..."
+dbROsaqBWmgw,open_ended_multi_choice,What is the recommended amount of hydrocort shampoo to use during application?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DOSAGE_CALCULATION
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to the re..."
+4rJLcaEn5YxD,open_ended_multi_choice,What was the percentage of patients with endoscopically proven healing of esophageal lesions after 8 weeks of treatment with pantoprazole sodium delayed-release tablets?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks for the percent..."
+2xd6ghH1mTAY,open_ended_multi_choice,"In the study of acute reflux esophagitis, what was the duration of initial treatment with pantoprazole sodium for injection before switching to oral pantoprazole sodium delayed-release tablets?",C,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the duration of tre..."
+QVqzYhqMqsKc,multi_choice,Which of the following is true regarding the contraindications of the drug Agrylin?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CONTRAINDICATIONS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks about the cont..."
+WeRy9MPlu5Mh,multi_choice,What percentage of lamotrigine in the body was removed during a 4-hour hemodialysis session in renal failure patients?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: PHARMACOLOGY
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the pharmacokinetics of l..."
+RsT4yEVvPchh,open_ended_multi_choice,"For the indication 'INDICATION', which drug brand name is relevant?",E,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_BRANDS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks for the relevant dru..."
+3Kchwj4Jz7wt,open_ended_multi_choice,Which of the following statements is true regarding JAYPIRCA's effect on CYP3A substrates?,D,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: PHARMACOLOGY
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to the effects ..."
+m5wAed5GouIf,multi_choice,What is the sodium content per 15 mL dose of the drug meijer stomach relief regular strength?,B,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_INGREDIENTS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks about the sodiu..."
+LA3ZaefDZj8O,open_ended_multi_choice,Which symptom is NOT mentioned as being relieved by 'nighttime severe cold and flu'?,D,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_BRANDS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to the symptoms ..."
+OY7z5v4a1npl,open_ended_multi_choice,What should physicians evaluate before prescribing venlafaxine tablets?,C,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the comprehensive e..."
+EBeIyLZMbrsE,open_ended_multi_choice,What should be monitored in children and adolescents taking venlafaxine tablets?,A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to monitoring protocol..."
+nz2BZihS2OTS,multi_choice,What is the brand name of the drug associated with the MULTI FUNCTION SLEEPING PACK?,E,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_BRANDS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks for the brand name o..."
+KDk5KEtcd2g7,open_ended_multi_choice,"When Ondansetron is administered with Tramadol, what potential effect might occur?",A,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: PHARMACOLOGY
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the potential effects of ..."
+WLXQgHU9F2BE,open_ended_multi_choice,"In fertility studies, what was the highest dose of fluoxetine administered to adult rats, and what was its approximate comparison to the MRHD on a mg/m² basis?",D,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to specific findings fro..."
+OB8FmIUYXQmZ,open_ended_multi_choice,Which of the following is NOT a correct storage condition for 'up and up nighttime cold and flu'?,C,D,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: STORAGE_HANDLING
+• Used LLM: gpt4o_mini
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to the..."
+UxhA39dXgR9u,open_ended_multi_choice,"In a trial for adjunctive therapy in adults with partial-onset seizures, what was the median seizure frequency reduction observed with a 400 mg/day dose of lamotrigine compared to placebo?",C,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to clinical..."
+cmpMXD8Z0ned,multi_choice,What is the recommended method for using the vaginal essential oil during menstruation to avoid repeated cross-infection of dirt?,E,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: PHARMACOLOGY
+• Used LLM: gpt4o
+• Routing Confidence: 0.80
+• Routing Reasoning: The question pertains to the use of essential oils..."
+cAAH7wJEE024,open_ended_multi_choice,What is one of the benefits of the daytime formulation of 'nighttime severe cold and flu'?,A,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.85
+• Routing Reasoning: The question pertains to the benefits of a s..."
+2pIjVD8VXRFI,open_ended_multi_choice,What is the recommended dosage for children aged 6 to under 12 years using the laxative for women?,D,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DOSAGE_CALCULATION
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks for the recom..."
+Uc5NEuhLvAQJ,multi_choice,Why might supplemental oxygen degrade the image quality during XENOVIEW imaging?,C,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DIAGNOSTICS
+• Used LLM: gpt4o_mini
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to imaging quality durin..."
+R72aNMGB07QK,open_ended_multi_choice,What is the maximum temperature that 'up and up ibuprofen' should be exposed to during storage?,A,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: STORAGE_HANDLING
+• Used LLM: gpt4o_mini
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to the..."
+ku8SatNgErue,open_ended_multi_choice,What is the potential effect of dg health nasal spray on the growth rate of children aged 4 to 11 years?,E,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: PATIENT_POPULATIONS
+• Used LLM: gpt4o
+• Routing Confidence: 0.85
+• Routing Reasoning: The question pertains to the effects of a s..."
+rd8y2NuvFRln,open_ended_multi_choice,What is the recommended dosage of vaginal essential oil for preventing repeated cross-infection during menstruation?,E,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.85
+• Routing Reasoning: The question pertains to the recommended dos..."
+dIQtc2GiPQqZ,multi_choice,What is the recommendation for patients with severe hepatic impairment (Child-Pugh score greater than 9) when administering FOSAPREPITANT?,C,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: PHARMACOLOGY
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the pharmacological consi..."
+FuPqZw2fNqV3,open_ended_multi_choice,What behavior was NOT observed in clinical trials of venlafaxine?,D,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to behavior..."
+bvwQ4liSv2ti,open_ended_multi_choice,How does the contraindication profile of WL-AAB-Z-W-982 compare to other drugs with known contraindications?,D,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CONTRAINDICATIONS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically addresses the contr..."
+2yMjqMjxvWG7,open_ended_multi_choice,Which of the following best describes the updated label claim for the drug brand name 'sterile'?,E,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_BRANDS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to the updated l..."
+gPlSlEHQxSSy,open_ended_multi_choice,What is the proper procedure for cleaning the spray nozzle of dg health nasal spray?,B,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: STORAGE_HANDLING
+• Used LLM: gpt4o_mini
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the proper proce..."
+wedPQbaIqDvb,open_ended_multi_choice,Which of the following drugs is specifically associated with the indication 'INDICATION'?,E,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks for a drug as..."
+Wj4C9lpFvvoj,multi_choice,What is the relationship between Hydroxym and mutagenicity studies conducted with prednisolone and hydrocortisone?,B,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TOXICOLOGY
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to mutagenicity studies, which..."
+qmBdSdTv1DpI,open_ended_multi_choice,What was the median percent reduction in primary generalized tonic-clonic seizures (PGTC) observed in patients treated with lamotrigine during a clinical trial?,D,C,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: CLINICAL_STUDIES
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks for data from a..."
+DhvhP8s8ImJs,open_ended_multi_choice,Which condition is NOT treated by the drug 'antifungal'?,D,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TREATMENT_PLANNING
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the therapeutic app..."
+xf6HN4OBnOfO,open_ended_multi_choice,"What was the highest dose of fluoxetine administered to rats in the 2-year carcinogenicity study, and how does it compare to the maximum recommended human dose (MRHD) on a mg/m² basis?",E,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: TOXICOLOGY
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question pertains to the carcinogenicity study o..."
+bTRBbV6qxZTA,open_ended_multi_choice,What is the brand name of the drug used for general body cleansing processes?,E,A,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_BRANDS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks for the brand name o..."
+h21jblZa7lPd,open_ended_multi_choice,What is the primary use of the drug branded as 70%?,E,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: DRUG_BRANDS
+• Used LLM: gpt4o
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically asks about the primary us..."
+3Ol2rkb1Io5n,open_ended_multi_choice,Which statement best describes the storage requirements for HIMARK?,C,B,"=== MULTI-LLM ROUTER ANALYSIS ===
+
+ROUTING DECISION:
+• Selected Agent: STORAGE_HANDLING
+• Used LLM: gpt4o_mini
+• Routing Confidence: 0.90
+• Routing Reasoning: The question specifically pertains to the..."

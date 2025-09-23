@@ -75,6 +75,7 @@ def analyze_submission_with_patterns():
     
     # Save for detailed analysis
     json.dump(errors, open('detailed_errors.json', 'w'), indent=2)
+    pd.DataFrame(errors).to_csv('detailed_errors.csv', index=False)
     print(f"\nSaved {len(errors)} errors to detailed_errors.json")
     
     return errors
