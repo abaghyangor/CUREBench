@@ -34,7 +34,7 @@ def analyze_submission_with_patterns():
                 'question': question[question_id],
                 'predicted': model_choice,
                 'correct': correct_answer,
-                'full_response': row['prediction'][:200] + "..." if len(row['prediction']) > 200 else row['prediction']
+                'full_response': row['prediction']
             })
     
     # Pattern Analysis
@@ -68,7 +68,7 @@ def analyze_submission_with_patterns():
     
     # Sample errors for manual review
     print(f"\n=== SAMPLE ERRORS (First 5) ===")
-    for i, error in enumerate(errors[:5]):
+    for i, error in enumerate(errors):
         print(f"\nError {i+1} ({error['question_type']}):")
         print(f"  Predicted: {error['predicted']}, Correct: {error['correct']}")
         print(f"  Response: {error['full_response']}")

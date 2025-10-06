@@ -1,9 +1,9 @@
 {
-  "model_name": "gpt-4o",
-  "model_type": "ChatGPTModel",
+  "model_name": "multiagent-router",
+  "model_type": "ChatGPTModel, DeepSeek",
   "track": "internal_reasoning",
   "base_model_type": "API",
-  "base_model_name": "gpt-4o",
+  "base_model_name": "gpt-4o + gpt4o-mini",
   "dataset": "cure_bench_pharse_1",
   "additional_info": "Submission using configuration file"
 }

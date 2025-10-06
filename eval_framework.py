@@ -644,6 +644,8 @@ Provide comprehensive clinical reasoning that covers relevant mechanisms, guidel
                 choice = self._extract_multiple_choice_answer(response)
                 # Ensure choice is never None or NULL
                 prediction["choice"] = choice if choice and str(choice).upper() not in ['NONE', 'NULL'] else ""
+
+            
         elif question_type == "open_ended":
             # For open-ended, only return response, use N/A for choice to avoid empty string issues
             prediction["choice"] = "NOTAVALUE" # Use N/A instead of empty string to avoid NULL validation issues
@@ -1076,7 +1078,7 @@ class CUREBenchMultiLLMRouter:
                 model_name="gpt-4o",
                 api_type="azure_openai",
                 max_tokens=600,
-                temperature=0.01
+                temperature=0.1
             )
         else:
             logger.warning("⚠️  Azure OpenAI GPT-4o not configured (missing AZURE_OPENAI_API_KEY_O1)")
@@ -1165,10 +1167,10 @@ class CUREBenchMultiLLMRouter:
             "CLINICAL_GUIDELINES": "gpt4o",  # Guidelines and protocols
             "TREATMENT_PLANNING": "gpt4o",  # Complex reasoning
             "PHARMACOLOGY": "gpt4o",  # Mechanism understanding  
-            "DIAGNOSTICS": "gpt4o_mini",  # Analytical reasoning
+            "DIAGNOSTICS": "gpt4o",  # Analytical reasoning
             "DOSAGE_CALCULATION": "gpt4o",  # Precise calculations
             "CONTRAINDICATIONS": "gpt4o",  # Safety information
-            "STORAGE_HANDLING": "gpt4o_mini",  # Simple factual info
+            "STORAGE_HANDLING": "gpt4o",  # Simple factual info
             "ADVERSE_EVENT": "gpt4o",  # Complex safety reasoning
             "DRUG_INGREDIENTS": "gpt4o",      # Factual formulation data
             "CLINICAL_STUDIES": "gpt4o",      # Statistical analysis
@@ -1250,7 +1252,7 @@ REASONING: [Brief explanation]"""
         prompt = self._get_agent_prompt(agent_name, question)
         
         logger.info(f"🔧 Using {llm_config.model_name} ({llm_config.api_type})")
-        response = await self._get_completion(prompt, llm_config)
+        response = await self._get_completion(prompt, llm_config, agent_name)
         answer = self._extract_answer(response)
         
         logger.info(f"✅ {agent_name} completed, extracted answer: {answer}")
@@ -1262,16 +1264,6 @@ REASONING: [Brief explanation]"""
         
         base_prompts = {
             "PHARMACOLOGY": f"""You are a clinical pharmacologist specializing in drug mechanisms, interactions, and pharmacokinetics.
-Example:
-QUESTION: Which mechanism best describes how omeprazole reduces gastric acid?
-Choices:
-A. H2 receptor blockade
-B. Irreversible inhibition of the H+/K+ ATPase in parietal cells
-C. Neutralizes acid by buffering
-D. Stimulates gastric motility
-
-Reasoning: Omeprazole is a proton pump inhibitor that irreversibly inhibits the H+/K+ ATPase on gastric parietal cells, reducing acid secretion.
-FINAL ANSWER: B
 
 Focus on molecular mechanisms, drug interactions, pharmacokinetic principles, and safety profiles.
 End with: FINAL ANSWER: [LETTER]
@@ -1281,16 +1273,6 @@ QUESTION: {question}
 
 
             "TREATMENT_PLANNING": f"""You are a clinical specialist in evidence-based treatment planning and therapeutic management.
-Example:
-QUESTION: A patient with non-ST elevation myocardial infarction (NSTEMI) arrives within hours of chest pain. Which is the most appropriate immediate management?
-Choices:
-A. Immediate thrombolysis
-B. Initiate antiplatelet therapy, anticoagulation, and risk-stratify for PCI
-C. Start high-dose corticosteroids
-D. Discharge with outpatient follow-up
-
-Reasoning: NSTEMI is managed with antiplatelet agents and anticoagulation and then risk stratified for invasive management; thrombolysis is for certain STEMI cases.
-FINAL ANSWER: B
 
 Focus on treatment protocols, therapeutic decision-making, clinical management strategies, and patient optimization.
 End with: FINAL ANSWER: [LETTER]
@@ -1300,16 +1282,6 @@ QUESTION: {question}
 """,
 
             "DIAGNOSTICS": f"""You are a diagnostic medicine specialist with expertise in laboratory medicine, imaging, and procedures.
-Example:
-QUESTION: What is the best initial diagnostic test to confirm a suspected deep vein thrombosis in a symptomatic leg?
-Choices:
-A. Chest X-ray
-B. Venous duplex (compression) ultrasound of the leg
-C. CT abdomen
-D. D-dimer alone
-
-Reasoning: Compression duplex ultrasound of the leg veins is the preferred initial imaging for suspected DVT in a symptomatic limb.
-FINAL ANSWER: B
 
 Focus on test interpretation, diagnostic accuracy, clinical correlation, and diagnostic procedures.
 End with: FINAL ANSWER: [LETTER]
@@ -1319,16 +1291,6 @@ QUESTION: {question}
 """,
 
             "DRUG_BRANDS": f"""You are a pharmaceutical specialist with expertise in brand-name medications and formulations.
-Example:
-QUESTION: Which brand name corresponds to acetaminophen in many countries?
-Choices:
-A. Tylenol
-B. Lipitor
-C. Advair
-D. Crestor
-
-Reasoning: Tylenol is a widely used brand name for acetaminophen/paracetamol.
-FINAL ANSWER: A
 
 Focus on brand identification, formulation differences, brand-specific indications, and manufacturer guidelines.
 End with: FINAL ANSWER: [LETTER]
@@ -1338,16 +1300,6 @@ QUESTION: {question}
 """,
 
             "CLINICAL_GUIDELINES": f"""You are a clinical guidelines specialist with expertise in evidence-based practice standards.
-Example:
-QUESTION: Per common outpatient guidelines, first-line empirical therapy for uncomplicated community-acquired pneumonia in a previously healthy adult is:
-Choices:
-A. Macrolide monotherapy (e.g., azithromycin)
-B. IV vancomycin
-C. Amphotericin B
-D. High-dose corticosteroids
-
-Reasoning: For otherwise healthy outpatients, macrolide monotherapy is guideline-consistent empirical therapy.
-FINAL ANSWER: A
 
 Focus on professional guidelines, evidence-based recommendations, standard of care, and regulatory requirements.
 End with: FINAL ANSWER: [LETTER]
@@ -1357,16 +1309,6 @@ QUESTION: {question}
 """,
 
             "DOSAGE_CALCULATION": f"""You are a clinical dosing specialist with expertise in dosage calculations and administration.
-Example:
-QUESTION: A medication is dosed at 5 mg/kg. For a 70 kg adult, what is the correct single dose?
-Choices:
-A. 200 mg
-B. 250 mg
-C. 350 mg
-D. 400 mg
-
-Reasoning: 5 mg/kg × 70 kg = 350 mg.
-FINAL ANSWER: C
 
 Focus on dosing calculations, patient-specific adjustments, administration routes, and safety margins.
 End with: FINAL ANSWER: [LETTER]
@@ -1376,16 +1318,6 @@ QUESTION: {question}
 """,
 
             "CONTRAINDICATIONS": f"""You are a medication safety specialist with expertise in contraindications and risk assessment.
-Example:
-QUESTION: Which of the following is an absolute contraindication to ACE inhibitor use?
-Choices:
-A. Controlled hypertension
-B. Pregnancy
-C. Mild dehydration
-D. Uncomplicated hyperlipidemia
-
-Reasoning: ACE inhibitors are contraindicated in pregnancy due to fetal renal/teratogenic risk.
-FINAL ANSWER: B
 
 Focus on absolute/relative contraindications, special populations, risk factors, and safety warnings.
 End with: FINAL ANSWER: [LETTER]
@@ -1395,16 +1327,6 @@ QUESTION: {question}
 """,
 
             "STORAGE_HANDLING": f"""You are a pharmaceutical storage specialist with expertise in drug stability and handling.
-Example:
-QUESTION: How should unopened insulin vials generally be stored?
-Choices:
-A. Room temperature indefinitely
-B. Refrigerated at 2–8°C until first use
-C. Frozen for long-term storage
-D. Kept in direct sunlight
-
-Reasoning: Unopened insulin vials are typically refrigerated (2–8°C); freezing and sunlight must be avoided.
-FINAL ANSWER: B
 
 Focus on storage conditions, temperature requirements, stability, and handling guidelines.
 End with: FINAL ANSWER: [LETTER]
@@ -1414,16 +1336,6 @@ QUESTION: {question}
 """,
 
  "ADVERSE_EVENT": f"""You are a drug safety specialist with expertise in adverse effects and drug interactions.
-Example:
-QUESTION: Which antibiotic is most strongly associated with dose-related nephrotoxicity and ototoxicity?
-Choices:
-A. Penicillin
-B. Macrolides
-C. Aminoglycosides (e.g., gentamicin)
-D. Tetracyclines
-
-Reasoning: Aminoglycosides are known for nephrotoxicity and ototoxicity, particularly at higher doses or prolonged use.
-FINAL ANSWER: C
 
 Focus on potential adverse effects, drug-drug interactions, contraindicated combinations, and safety profiles.
 End with: FINAL ANSWER: [LETTER]
@@ -1433,16 +1345,6 @@ QUESTION: {question}
 """,
 
         "PATIENT_POPULATIONS": f"""You are a clinical specialist in special population pharmacotherapy.
-Example:
-QUESTION: Which analgesic is generally considered acceptable during pregnancy when clinically indicated?
-Choices:
-A. Acetaminophen (paracetamol)
-B. Isotretinoin
-C. Warfarin
-D. Methotrexate
-
-Reasoning: Acetaminophen is commonly regarded as safe for use in pregnancy; warfarin, methotrexate, and isotretinoin are contraindicated.
-FINAL ANSWER: A
 
 Focus on pediatric, geriatric, pregnancy, and special population considerations for drug therapy.
 End with: FINAL ANSWER: [LETTER]
@@ -1452,16 +1354,6 @@ QUESTION: {question}
 """,
 
         "CLINICAL_STUDIES": f"""You are a clinical research specialist with expertise in interpreting trial data and research findings.
-Example:
-QUESTION: In a randomized trial, a p-value of 0.03 for the primary endpoint indicates:
-Choices:
-A. The observed effect is unlikely due to chance at the 0.05 level
-B. The effect size is clinically large
-C. The study is invalid
-D. The null hypothesis is proven true
-
-Reasoning: A p-value of 0.03 is less than 0.05, indicating statistical significance at the 5% level (does not by itself speak to clinical size).
-FINAL ANSWER: A
 
 Focus on clinical trial results, statistical analysis, research methodology, and evidence interpretation.
 End with: FINAL ANSWER: [LETTER]
@@ -1471,16 +1363,6 @@ QUESTION: {question}
 """,
 
         "DRUG_INGREDIENTS": f"""You are a pharmaceutical formulation specialist with expertise in drug composition.
-Example:
-QUESTION: Which component is the active ingredient in standard ibuprofen tablets?
-Choices:
-A. Lactose
-B. Ibuprofen
-C. Magnesium stearate
-D. Microcrystalline cellulose
-
-Reasoning: Ibuprofen is the active pharmaceutical ingredient; the others are excipients.
-FINAL ANSWER: B
 
 Focus on active ingredients, inactive components, excipients, and formulation characteristics.
 End with: FINAL ANSWER: [LETTER]
@@ -1490,16 +1372,6 @@ QUESTION: {question}
 """,
 
         "TOXICOLOGY": f"""You are a toxicology specialist with expertise in drug toxicity and safety studies.
-Example:
-QUESTION: Acetaminophen overdose primarily causes toxicity to which organ via NAPQI formation?
-Choices:
-A. Lungs
-B. Liver
-C. Heart
-D. Pancreas
-
-Reasoning: Acetaminophen overdose causes hepatotoxicity via the reactive metabolite NAPQI which depletes glutathione.
-FINAL ANSWER: B
 
 Focus on toxicity profiles, carcinogenicity, mutagenicity, teratogenicity, and safety studies.
 End with: FINAL ANSWER: [LETTER]
@@ -1509,16 +1381,6 @@ QUESTION: {question}
 """,
 
             "GENERAL_MEDICINE": f"""You are a general medicine expert with broad medical knowledge.
-Example:
-QUESTION: A 68-year-old with resting tremor, bradykinesia, and rigidity most likely has:
-Choices:
-A. Parkinson disease
-B. Essential tremor
-C. Huntington disease
-D. Myasthenia gravis
-
-Reasoning: The triad of resting tremor, bradykinesia, and rigidity is characteristic of Parkinson disease.
-FINAL ANSWER: A
 
 Provide comprehensive medical analysis covering relevant principles, pathophysiology, and clinical reasoning.
 End with: FINAL ANSWER: [LETTER]
@@ -1558,18 +1420,17 @@ FINAL ANSWER: {answer}"""
         
         return answer, final_reasoning
     
-    async def _get_completion(self, prompt: str, llm_config: LLMConfig, max_tokens: int = None) -> str:
+    async def _get_completion(self, prompt: str, llm_config: LLMConfig, agent_name: str = None, max_tokens: int = None) -> str:
         """Get completion with API debugging"""
         if max_tokens is None:
-            if 'STORAGE_HANDLING' in prompt or 'DRUG_BRANDS' in prompt:
-                max_tokens = 200
-            elif "TREATMENT_PLANNING" in prompt or "PHARMACOLOGY" in prompt:
-                max_tokens = 500  # Complex reasoning  
+            if agent_name in ['TREATMENT_PLANNING', 'PHARMACOLOGY', 'PATIENT_POPULATIONS']:
+                max_tokens = 2000  # Up from 1200
+            elif agent_name in ['CONTRAINDICATIONS', 'ADVERSE_EVENT']:
+                max_tokens = 1800  # Up from 1100
             else:
-                max_tokens = llm_config.max_tokens
-        
-        # Ensure minimum tokens for proper responses
-        max_tokens = max(max_tokens, 350)
+                max_tokens = 1500  # Up from 900
+
+        max_tokens = max(max_tokens, 900)  # Minimum allocation
         
         logger.debug(f"🔌 API call to {llm_config.api_type} - {llm_config.model_name}")
         logger.debug(f"📊 Tokens: {max_tokens}, Temp: {llm_config.temperature}")
@@ -1583,6 +1444,9 @@ FINAL ANSWER: {answer}"""
                     temperature=llm_config.temperature
                 )
                 result = response.choices[0].message.content.strip()
+                # Check if response was truncated
+                if response.choices[0].finish_reason == "length":
+                    logger.warning(f"⚠️ Response truncated for {agent_name} - consider increasing tokens")
                 logger.debug(f"✅ {llm_config.api_type} API success - {len(result)} chars returned")
                 return result
             
@@ -1668,9 +1532,9 @@ FINAL ANSWER: {answer}"""
         
         # Priority 1: Explicit FINAL ANSWER (take LAST occurrence)
         final_patterns = [
-            r'FINAL ANSWER:\s*([A-E])',
-            r'FINAL:\s*([A-E])',
-            r'ANSWER:\s*([A-E])'
+            r'FINAL ANSWER:\s*([A-E])\b',  # Add word boundary
+            r'FINAL:\s*([A-E])\b',
+            r'(?:^|\n)ANSWER:\s*([A-E])\b',  # Must be at start of line
         ]
         
         for pattern in final_patterns:

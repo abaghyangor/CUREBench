@@ -4,7 +4,7 @@
     "model_type": "ChatGPTModel, DeepSeek",
     "track": "agentic_reasoning",
     "base_model_type": "API",
-    "base_model_name": "gpt-4o + deepseek-r1",
+    "base_model_name": "gpt-4o + gpt4o-mini",
     "dataset": "cure_bench_pharse_1",
     "additional_info": "Submission using configuration file"
   },
