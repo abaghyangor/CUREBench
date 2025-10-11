@@ -250,6 +250,25 @@ class MultiAgentModel(BaseModel):
     def inference(self, prompt: str, max_tokens: int = 1024, question_type: str = "multi_choice") -> Tuple[str, List[Dict]]:
         """Multi-agent inference with debugging"""
         import asyncio
+
+                # Extract the raw question if it's wrapped in a prompt
+        # Look for the actual question content
+        if "Provide only the letter" in prompt:
+            # Extract question from the wrapped prompt for multi_choice
+            lines = prompt.split('\n')
+            # Find the question between the role description and the instruction
+            question_start = 2  # After the role description
+            question_end = -2  # Before "Provide only the letter"
+            question = '\n'.join(lines[question_start:question_end]).strip()
+        elif "Provide comprehensive clinical reasoning" in prompt:
+            # Extract from open-ended prompt
+            if "Question: " in prompt:
+                question = prompt.split("Question: ")[1].split("\n\nProvide comprehensive")[0].strip()
+            else:
+                question = prompt
+        else:
+            # Assume it's already the raw question
+            question = prompt
         
         self.debug_stats["total_calls"] += 1
         call_id = self.debug_stats["total_calls"]
@@ -263,7 +282,7 @@ class MultiAgentModel(BaseModel):
         try:
             # Run the multi-agent router system
             answer, reasoning = asyncio.run(
-                self.router_system.process_question(prompt, question_type)
+                self.router_system.process_question(question, question_type)
             )
             
             # Extract routing info from reasoning for debugging
